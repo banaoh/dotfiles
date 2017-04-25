@@ -92,7 +92,7 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 "バックアップファイルのディレクトリを指定する
-set backupdir=$HOME/.vim/backup
+set backupdir=$HOME/dotfiles/.vim/backup
 
 "クリップボードをWindowsと連携する
 set clipboard=unnamed
@@ -105,7 +105,7 @@ set cursorline " カーソルラインをハイライト
 set nocompatible
 
 ""スワップファイル用のディレクトリを指定する
-set directory=$HOME/.vim/backup
+set directory=$HOME/dotfiles/.vim/backup
 
 "タブの代わりに空白文字を指定する
 set expandtab

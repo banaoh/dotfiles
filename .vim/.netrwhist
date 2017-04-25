@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/Users/Banaoh/Development/WebApp/taskapp_api/config'
+let g:netrw_dirhist_2='/Users/Banaoh/Development/WebApp/Meomoo/config'
+let g:netrw_dirhist_3='/Users/Banaoh/Development/WebApp/rebecca/db/migrate'
+let g:netrw_dirhist_4='/Users/Banaoh/Development/WebApp/rebecca/app/controllers/concerns'
+let g:netrw_dirhist_5='/Users/Banaoh/Development/WebApp/rebecca/app/controllers/api'
+let g:netrw_dirhist_6='/Users/Banaoh/Development/WebApp/rebecca/app/views/login'
+let g:netrw_dirhist_7='/Users/Banaoh/Development/iPhoneAPP/rebbeca_ios/Rebecca/Controller'
+let g:netrw_dirhist_8='/Users/Banaoh/.ssh'
+let g:netrw_dirhist_9='/Users/Banaoh/.oh-my-zsh'
