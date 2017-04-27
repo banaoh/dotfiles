@@ -1,11 +1,20 @@
 
+"dein Scripts-----------------------------
 if &compatible
-  set nocompatible
+  set nocompatible               " Be iMproved
 endif
 
-  set runtimepath+=~/dotfiles/.vim/dein/repos/github.com/Shougo/dein.vim
+" Required:
+set runtimepath+=/Users/banaoh/dotfiles/.vim/bundle/repos/github.com/Shougo/dein.vim
 
-  call dein#begin(expand('~/dotfiles/.vim/dein'))
+" Required:
+if dein#load_state('/Users/banaoh/dotfiles/.vim/bundle')
+  call dein#begin('/Users/banaoh/dotfiles/.vim/bundle')
+
+  " Add or remove your plugins here:
+  call dein#add('altercation/vim-colors-solarized')
+  call dein#add('dracula/vim')
+
 
   call dein#add('Shougo/dein.vim')
   " あいまい検索
@@ -56,15 +65,24 @@ call dein#add('tpope/vim-endwise')
   "マークダウン記法
   "tabでインデント、shift+tabでの逆インデント
   call dein#add('violetyk/iikanji-markdown.vim')
-call dein#end()
+  " You can specify revision/branch/tag.
+  call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
 
-if dein#check_install()
-  :call dein#install()
+  " Required:
+  call dein#end()
+  call dein#save_state()
 endif
 
+" Required:
+filetype plugin indent on
+syntax enable
 
+" If you want to install not installed plugins on startup.
+"if dein#check_install()
+"  call dein#install()
+"endif
 
-
+"End dein Scripts-------------------------
 
 "--------------------
 """ vim settings
@@ -73,8 +91,7 @@ endif
 " colorscheme
 " ------------------------------------
 syntax on
-colorscheme badwolf
-highlight Normal ctermfg=grey ctermbg=darkblue
+color dracula
 
 ""新しい行のインデントを現在行と同じにする
 set autoindent
