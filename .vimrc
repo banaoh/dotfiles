@@ -4,11 +4,12 @@ if &compatible
 endif
 
 " Required:
+" ここにdeinをcloneする
 set runtimepath+=/Users/banaoh/dotfiles/.vim/bundle/repos/github.com/Shougo/dein.vim
 
 " Required:
-if dein#load_state('/Users/banaoh/dotfiles/.vim/bundle')
-  call dein#begin('/Users/banaoh/dotfiles/.vim/bundle')
+if dein#load_state('~/dotfiles/.vim/bundle')
+  call dein#begin('~/dotfiles/.vim/bundle')
   call dein#add('Shougo/dein.vim')
  
   " texの設定   

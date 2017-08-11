@@ -1,6 +1,6 @@
 
-# Path to your oh-my-zsh installation.
-export ZSH=/Users/Banaoh/.oh-my-zsh
+s Path to your oh-my-zsh installation.
+export ZSH=$HOME/.oh-my-zsh
 export PATH="$HOME/.rbenv/bin:$PATH" 
 eval "$(rbenv init - zsh)"
 
