@@ -1,99 +1,42 @@
-Bad Wolf
-========
+# endwise.vim
 
-A color scheme for Vim, pieced together by [Steve Losh](http://stevelosh.com/).
+This is a simple plugin that helps to end certain structures
+automatically.  In Ruby, this means adding `end` after `if`, `do`, `def`
+and several other keywords. In Vimscript, this amounts to appropriately
+adding `endfunction`, `endif`, etc.  There's also Bourne shell, VB
+(don't ask), C/C++ preprocessor, and Lua support.
 
-There's still quite a lot of room for improvement (particularly in HTML) so feel
-free to send me ideas through the [issue tracker][] or pull requests.
+A primary guiding principle in designing this plugin was that an
+erroneous insertion is never acceptable.  The behavior is only triggered
+once pressing enter on the end of the line.  When this happens, endwise
+searches for a matching end structure and only adds one if none is
+found.
 
-It's MIT/X11 licensed, so feel free to hack it apart if you like.
+While the goal was to make it customizable, this turned out to be a tall
+order.  Every language has vastly different requirements.  Nonetheless,
+for those bold enough to attempt it, you can follow the model of the
+autocmds in the plugin to set the three magic variables governing
+endwise's behavior.
 
-**If you're going to send a pull request that you want me to merge, please post
-a comment in it with before/after screenshots!**
+## Installation
 
-[issue tracker]: http://github.com/sjl/badwolf/issues
+If you don't have a preferred installation method, I recommend
+installing [pathogen.vim](https://github.com/tpope/vim-pathogen), and
+then simply copy and paste:
 
-Screenshots
------------
+    cd ~/.vim/bundle
+    git clone git://github.com/tpope/vim-endwise.git
 
-These screenshots may be out of date, but they'll at least give you a taste of
-what you're in for.
+## Self-Promotion
 
-### Python
+Like endwise.vim? Follow the repository on
+[GitHub](https://github.com/tpope/vim-endwise) and vote for it on
+[vim.org](http://www.vim.org/scripts/script.php?script_id=2386).  And if
+you're feeling especially charitable, follow [tpope](http://tpo.pe/) on
+[Twitter](http://twitter.com/tpope) and
+[GitHub](https://github.com/tpope).
 
-![Screenshot](http://i.imgur.com/fQGGC.png)
+## License
 
-### HTML (Django Templates)
-
-![Screenshot](http://i.imgur.com/LgLar.png)
-
-### Clojure
-
-![Screenshot](http://i.imgur.com/THHz7.png)
-
-### Markdown
-
-![Screenshot](http://i.imgur.com/J56VS.png)
-
-Configuration
--------------
-
-There are a few settings you can use to tweak how Bad Wolf looks.
-
-### g:badwolf\_darkgutter
-
-Determines whether the line number, sign column, and fold column are rendered
-darker than the normal background, or the same.
-
-    " Make the gutters darker than the background.
-    let g:badwolf_darkgutter = 1
-
-Default: `0` (off, gutters are the same as the background)
-
-### g:badwolf\_tabline
-
-Determines how light to render the background of the tab line (the line at the
-top of the screen containing the various tabs (only in console mode)).
-
-Can be set to `0`, `1`, `2`, or `3`.
-
-    " Make the tab line darker than the background.
-    let g:badwolf_tabline = 0
-
-    " Make the tab line the same color as the background.
-    let g:badwolf_tabline = 1
-
-    " Make the tab line lighter than the background.
-    let g:badwolf_tabline = 2
-
-    " Make the tab line much lighter than the background.
-    let g:badwolf_tabline = 3
-
-Default: `1` (same color as the background)
-
-### g:badwolf\_html\_link\_underline
-
-Determines whether text inside `a` tags in HTML files will be underlined.
-
-    " Turn off HTML link underlining
-    let g:badwolf_html_link_underline = 0
-
-Default: `1` (on)
-
-### g:badwolf\_css\_props\_highlight
-
-Determines whether CSS properties should be highlighted.
-
-    " Turn on CSS properties highlighting
-    let g:badwolf_css_props_highlight = 1
-
-Default: `0` (off)
-
-Contributing
-------------
-
-I'd love pull requests, but won't necessarily merge all of them.  Color schemes
-are a very subjective topic -- we don't all have the same taste.
-
-**If you're going to send a pull request that you want me to merge, please post
-a comment in it with before/after screenshots!**
+Copyright (c) Tim Pope.  Distributed under the same terms as Vim itself.
+See `:help license`.

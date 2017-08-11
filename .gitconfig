@@ -2,6 +2,7 @@
 	default = simple
 [core]
 	editor = vim -c \"set fenc=utf-8\"
+	excludesfile = /Users/banaoh/.gitignore_global
 [user]
 	name = Kengo Obana
 	email = aoyama.banaoh@gmail.com

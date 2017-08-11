@@ -1,0 +1,10 @@
+"initialize
+let g:sync_dirs = {}
+let g:sync_user = {}
+let g:sync_pass = {}
+
+"project1 setting
+let local_dir = '/Users/Banaoh/Development/Internship/retty'
+let g:sync_dirs[local_dir] ='scp://d-partner75.corp.retty.me/retty'
+let g:sync_user[local_dir] ='d-partner75'
+
