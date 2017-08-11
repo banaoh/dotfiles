@@ -66,9 +66,10 @@ if dein#load_state('~/dotfiles/.vim/bundle')
   " カーソルの可視化
   call dein#add('terryma/vim-multiple-cursors')
 
-  " 編集されたら左側に+ -をつける  
+  " 編集されたら左側に+ -をつける
+  " なぜか読み込まれないので明示的に記述
   call dein#add('banaoh/changed.vim')
-
+  source ~/dotfiles/.vim/bundle/repos/github.com/banaoh/changed.vim/changed-vim/changed.vim
   " ーーーーーーーーーーーーーーーーーーーーーーー
   
   "マークダウン記法
@@ -101,9 +102,9 @@ color dracula
 set autoindent
 "インデントの可視化を有効化
 "インデントの可視化を無効化するもの
-" let g:indent_guides_enable_on_vim_startup = 1
-" let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
-" let g:vim_markdown_new_list_item_indent = 2
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
+let g:vim_markdown_new_list_item_indent = 2
 
 "ツリー表示
 " autocmd VimEnter * execute 'NERDTree' | wincmd p
@@ -239,9 +240,9 @@ autocmd QuickFixCmdPost *grep* cwindow
 
 " インデントの可視化
 " indentLine
-let g:indentLine_color_term = 111
-let g:indentLine_color_gui = '#708090'
-let g:indentLine_char = '¦' "use ¦, ┆ or │
+" let g:indentLine_color_term = 111
+" let g:indentLine_color_gui = '#708090'
+" let g:indentLine_char = '¦' "use ¦, ┆ or │
 
 "----------------------------------------------------------
 " CtrlPの設定
