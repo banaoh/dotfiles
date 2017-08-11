@@ -1,17 +1,17 @@
 [push]
-	default = simple
+  default = simple
 [core]
-	editor = vim -c \"set fenc=utf-8\"
-	excludesfile = /Users/banaoh/.gitignore_global
+  editor = vim -c \"set fenc=utf-8\"
+  excludesfile = /Users/banaoh/.gitignore_global
 [user]
-	name = Kengo Obana
-	email = aoyama.banaoh@gmail.com
+  name = Kengo Obana
+  email = aoyama.banaoh@gmail.com
 [alias]
-	co = checkout
-	st = status
-	brd = branch -D
-	ci = commit
-	br = branch
+  co = checkout
+  st = status
+  brd = branch -D
+  ci = commit
+  br = branch
   d  = diff
   dm = diff master           # masterとのdiff
   dw = diff --color-words    # 単語単位でいろつけてdiff
