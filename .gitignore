@@ -1,6 +1,14 @@
 .DS_Store
-/.vim/
+/.vim
 /.tmux/
 *.log
 ftplugin/
 snippets/
+
+!.git-completion.sh
+!.gitconfig
+!.gitignore
+!.tmux.conf
+!.vimrc
+!.zshrc
+!dotfilesLink.sh
