@@ -114,7 +114,6 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " デフォルトでツリーを表示させる
 let g:nerdtree_tabs_open_on_console_startup=1
 
-
 "バックアップファイルのディレクトリを指定する
 set backupdir=$HOME/dotfiles/.vim/backup
 
@@ -160,11 +159,9 @@ set showmatch
 "コマンドを表示
 set showcmd
 
-
 " grep検索を設定する
 set grepformat=%f:%l:%m,%f:%l%m,%f\ \ %l%m,%f
 set grepprg=grep\ -nh
-
 
 "----キーマップを割り当て-----
 
@@ -208,7 +205,6 @@ nnoremap <C-g> <ESC>:call ScpUpload()<CR>
 map <C-n> :NERDTreeToggle<CR>
 "-------------------
 
-
 " http://www.kevinli.co/posts/2017-01-19-multiple-cursors-in-500-bytes-of-vimscript/
 let g:mc = "y/\\V\<C-r>=escape(@\", '/')\<CR>\<CR>"
 
@@ -238,12 +234,6 @@ set whichwrap=b,s,h,l,<,>,[,]
 " vimgrepやgrep した際に、cwindowしてしまう
 autocmd QuickFixCmdPost *grep* cwindow
 
-" インデントの可視化
-" indentLine
-" let g:indentLine_color_term = 111
-" let g:indentLine_color_gui = '#708090'
-" let g:indentLine_char = '¦' "use ¦, ┆ or │
-
 "----------------------------------------------------------
 " CtrlPの設定
 "----------------------------------------------------------
@@ -257,7 +247,6 @@ command! CtrlPCommandLine call ctrlp#init(ctrlp#commandline#id())
 
 " CtrlPFunkyの有効化
 let g:ctrlp_funky_matchtype = 'path' 
-
 
 " エスケープシーケンスの表示 tab eol
 set list
