@@ -8,7 +8,7 @@ eval "$(rbenv init - zsh)"
 export BSTINPUTS=$BSTINPUTS:/usr/share/texmf/jbibtex/bst
 
 export PATH="$PATH:/usr/local/Cellar/openssl/1.0.2/bin"
-
+export PATH="$HOME/.rbenv/shims:$PATH"
 # powerline関連のもののパスを通す
 # export PATH=~/.pyenv/versions/anaconda3-4.2.0/lib/python3.5/site-packages:$PATH
 # . ~/.pyenv/versions/anaconda3-4.2.0/lib/python3.5/site-packages/powerline/bindings/zsh/powerline.zsh
