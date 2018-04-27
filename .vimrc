@@ -148,11 +148,6 @@ set incsearch
 "行番号を表示する
 set number
 
-" 自動的に閉じ括弧を入力
-imap { {}<LEFT>
-imap [ []<LEFT>
-imap ( ()<LEFT>
-
 ""閉括弧が入力された時、対応する括弧を強調する
 set showmatch
 
@@ -179,7 +174,6 @@ nnoremap sw <C-w>w
 nnoremap tt <C-w>_<C-w><Bar>
 nnoremap tu <C-w>=
 nnoremap <C-v> v<C-n>
-
 
 " 検索ハイライトを利用
 " 検索結果のハイライトをEsc連打でクリアする
