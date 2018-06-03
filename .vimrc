@@ -89,15 +89,6 @@ syntax enable
 
 "End dein Scripts-------------------------
 
-"--------------------
-""" vim settings
-"--------------------
-" ------------------------------------
-" colorscheme
-" ------------------------------------
-syntax on
-color dracula
-
 ""新しい行のインデントを現在行と同じにする
 set autoindent
 "インデントの可視化を有効化
@@ -157,6 +148,13 @@ set showcmd
 " grep検索を設定する
 set grepformat=%f:%l:%m,%f:%l%m,%f\ \ %l%m,%f
 set grepprg=grep\ -nh
+
+" ウインドウのタイトルバーにファイルのパス情報等を表示する
+set title
+
+" カーソルを行頭、行末で止まらないようにする
+set whichwrap=b,s,h,l,<,>,[,]
+
 
 "----キーマップを割り当て-----
 
@@ -218,12 +216,6 @@ nnoremap cQ :call SetupCR()<CR>#``qz
 vnoremap <expr> cq ":\<C-u>call SetupCR()\<CR>" . "gv" . g:mc . "``qz"
 vnoremap <expr> cQ ":\<C-u>call SetupCR()\<CR>" . "gv" . substitute(g:mc, '/', '?', 'g') . "``qz"
 
-
-" ウインドウのタイトルバーにファイルのパス情報等を表示する
-set title
-
-" カーソルを行頭、行末で止まらないようにする
-set whichwrap=b,s,h,l,<,>,[,]
 
 " vimgrepやgrep した際に、cwindowしてしまう
 autocmd QuickFixCmdPost *grep* cwindow

@@ -27,19 +27,6 @@ export PATH="$PATH:/Users/Banaoh/Library/Android/sdk/platform-tools"
 setopt share_history
 ZSH_THEME="robbyrussell"
 
-# ディレクトリ名だけでも移動可能
-setopt auto_cd
-alias cdw="cd /Users/Banaoh/Development/WebApp"
-alias cdws="cd /Users/Banaoh/Development/WebApp/sake"
-alias cddi="cd /Users/Banaoh/Development/Internship"
-alias cddiv="cd /Users/Banaoh/Development/Internship/vagrant"
-alias cdwr="cd /Users/Banaoh/Development/WebApp/rebecca"
-alias cdir="cd /Users/Banaoh/Development/iPhoneAPP/rebbeca_ios"
-alias cdi="cd /Users/Banaoh/Development/iPhoneAPP/"
-alias c="clear"
-alias la="ll -a"
-
-
 # git branchの設定========
 # RPROMPで%{%}でくくらないとバグる
 autoload -Uz vcs_info
@@ -70,5 +57,16 @@ if ! zplug check --verbose; then
 fi
 
 zplug load --verbose
+
 # -------------------------
+# ディレクトリ名だけでも移動可能
+setopt auto_cd
+alias cdw="cd /Users/Banaoh/Development/WebApp"
+alias cdws="cd /Users/Banaoh/Development/WebApp/sake"
+alias cddi="cd /Users/Banaoh/Development/Internship"
+alias cddiv="cd /Users/Banaoh/Development/Internship/vagrant"
+alias cdi="cd /Users/Banaoh/Development/iPhoneAPP/"
+alias c="clear"
+alias la="ll -a"
+
 
