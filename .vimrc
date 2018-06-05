@@ -89,6 +89,9 @@ syntax enable
 
 "End dein Scripts-------------------------
 
+colorscheme default
+
+
 ""新しい行のインデントを現在行と同じにする
 set autoindent
 "インデントの可視化を有効化
