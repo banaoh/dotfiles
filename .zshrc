@@ -1,8 +1,10 @@
+## エイリアス ================================================
+alias dc="docker-compose"
+alias drmi="docker rmi -f"
+alias di="docker images"
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
-export PATH="$HOME/.rbenv/bin:$PATH" 
-eval "$(rbenv init - zsh)"
 source $ZSH/oh-my-zsh.sh
 
 # bibtexのパス設定
@@ -24,6 +26,13 @@ compinit -u
 # android sdkのパス
 export PATH="$PATH:/Users/Banaoh/Library/Android/sdk/platform-tools"
 
+# nodebrew のパス(node)
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
+# rbenv のパス(ruby)
+export PATH="$HOME/.rbenv/bin:$PATH" 
+eval "$(rbenv init - zsh)"
+
 setopt share_history
 ZSH_THEME="robbyrussell"
 
@@ -38,7 +47,7 @@ zstyle ':vcs_info:*' formats "%F{green}%c%u[%b]%f"
 zstyle ':vcs_info:*' actionformats '[%b|%a]'
 precmd () { vcs_info }
 
-PROMPT='%F{cyan}[%~]%f %(?.$.%F{red}$%f)'
+PROMPT='%F{cyan}[%~]%f %(?.$ .%F{red}$%f)'
 RPROMPT='${vcs_info_msg_0_}'
 
 # zsh-plugin---------------
@@ -68,5 +77,7 @@ alias cddiv="cd /Users/Banaoh/Development/Internship/vagrant"
 alias cdi="cd /Users/Banaoh/Development/iPhoneAPP/"
 alias c="clear"
 alias la="ll -a"
-
-
+alias d="docker"
+alias dc="docker container"
+alias dls="docker container ls"
+alias gti="git"
